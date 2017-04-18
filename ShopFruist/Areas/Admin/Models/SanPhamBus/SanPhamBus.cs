@@ -14,6 +14,9 @@ namespace ShopFruist.Areas.Admin.Models.SanPhamBus
             return db.Query<SANPHAM>("select * from sanpham");
         }
 
-         
+        public static void insert(SANPHAM sp)
+        {
+             sp.Insert();
+        }
     }
 }

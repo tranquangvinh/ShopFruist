@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
+
 namespace ShopFruist.Areas.Admin.Controllers
 {
     public class ProductController : Controller
@@ -24,23 +25,19 @@ namespace ShopFruist.Areas.Admin.Controllers
         // GET: Admin/Product/Create
         public ActionResult Create()
         {
+            var LoaiSanPham = Models.LoaiSanPhamBus.LoaiSanPhamBus.DanhSach();
+            ViewBag.LoaiSanPham = LoaiSanPham;
+
             return View();
         }
 
         // POST: Admin/Product/Create
         [HttpPost]
-        public ActionResult Create(FormCollection collection)
+        public ActionResult Create(ShopFruistConnection.SANPHAM sp)
         {
-            try
-            {
-                // TODO: Add insert logic here
+            Models.SanPhamBus.SanPhamBus.insert(sp);
 
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
-            }
+            return RedirectToAction("Create");
         }
 
         // GET: Admin/Product/Edit/5

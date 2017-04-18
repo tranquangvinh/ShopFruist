@@ -47,4 +47,9 @@
 }
 .content {
     padding-left: 270px;
+    padding-right: 50px;
+}
+.content h1{
+    padding-bottom: 15px;
+    border-bottom: 1px solid #777777;
 }
