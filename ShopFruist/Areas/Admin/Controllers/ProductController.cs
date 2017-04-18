@@ -32,9 +32,22 @@ namespace ShopFruist.Areas.Admin.Controllers
         }
 
         // POST: Admin/Product/Create
-        [HttpPost]
+        [HttpPost, ValidateInput(false)]
         public ActionResult Create(ShopFruistConnection.SANPHAM sp)
         {
+            var hpt = HttpContext.Request.Files[0];
+            if (HttpContext.Request.Files.Count > 0)
+            {
+                if (hpt.ContentLength > 0)
+                {
+                    string temp = hpt.FileName;
+                    string RDString = Guid.NewGuid().ToString();
+                    string fullNameImage = "~/upload/img/" + RDString + temp;
+                    hpt.SaveAs(Server.MapPath(fullNameImage));
+                    sp.HinhAnh = fullNameImage;
+                }
+            }
+
             Models.SanPhamBus.SanPhamBus.insert(sp);
 
             return RedirectToAction("Create");
