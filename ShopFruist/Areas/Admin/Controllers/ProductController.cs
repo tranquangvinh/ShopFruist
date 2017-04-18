@@ -11,6 +11,7 @@ namespace ShopFruist.Areas.Admin.Controllers
         // GET: Admin/Product
         public ActionResult Index()
         {
+            var ds = Models.SanPhamBus.SanPhamBus.DanhSach();
             return View();
         }
 
