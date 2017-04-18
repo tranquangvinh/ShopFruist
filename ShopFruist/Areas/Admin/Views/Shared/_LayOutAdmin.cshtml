@@ -1,0 +1,33 @@
+﻿
+@{
+    ViewBag.Title = "_LayOutAdmin";
+}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+        <title></title>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:700,400" />
+        <link rel="stylesheet" href="~/asset/css/style.css" />
+        <script src="~/asset/js/jquery-2.1.4.min.js"></script>
+        <script src="~/asset/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <div class="warp">
+            <div class="sidebar">
+                <ul>
+                    <li>Menu</li>
+                    <li>Sảm phẩm</li>
+                </ul>
+            </div>
+            <div class="content">
+                @RenderBody()
+            </div>
+        </div>
+
+    </body>
+</html>
+

@@ -1,0 +1,628 @@
+﻿
+@{
+    ViewBag.Title = "_MainLayOut";
+}
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+    <title></title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:700,400" />
+    <link rel="stylesheet" href="~/asset/css/style.css" />
+    <script src="~/asset/js/jquery-2.1.4.min.js"></script>
+    <script src="~/asset/js/bootstrap.min.js"></script>
+    <script src="~/asset/plugins/owl/owl.carousel.min.js"></script>
+    <script src="~/asset/js/app.js"></script>
+</head>
+<body>
+    <div class="headerSiteMobile">
+        <div class="wrap"><a class="btn btn-menu"></a><a class="logo" href=""><img src="~/asset/img/logo.png" /></a></div>
+        <div class="headerFooter">
+            <div class="pull-left">
+                <div class="headerSite__social"><a><span class="fa fa-facebook"></span></a><a><span class="fa fa-twitter"></span></a><a><span class="fa fa-youtube"></span></a><a><span class="fa fa-skype"></span></a><a><span class="fa fa-google-plus"></span></a></div>
+            </div>
+            <div class="pull-right"><a class="headerSite__cart cart" href="">Giỏ hàng<span class="cart__count">10</span></a></div>
+            <div class="clearfix"></div>
+        </div>
+        <div class="overlayMenu"></div>
+        <div class="menuMobile">
+            <ul class="menu">
+                <li><a href=""><span class="fa fa-home"></span>Trang chủ</a></li>
+                <li class="has-child">
+                    <a href="">Sản phẩm</a>
+                    <ul class="sub-menu">
+                        <li class="has-child">
+                            <a href="">TRái cây nhập khẩu</a>
+                            <ul class="sub-menu">
+                                <li><a href="">TRái cây nhập khẩu</a></li>
+                                <li><a href="">TRái cây xuất khẩu</a></li>
+                                <li><a href="">TRái cây sấy khô</a></li>
+                                <li><a href="">TRái cây theo mùa</a></li>
+                                <li><a href="">khuyến mãi</a></li>
+                                <li><a href="">Bán chạy nhất</a></li>
+                                <li><a href="">Hàng mới về</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="">TRái cây xuất khẩu</a></li>
+                        <li><a href="">TRái cây sấy khô</a></li>
+                        <li><a href="">TRái cây theo mùa</a></li>
+                        <li><a href="">khuyến mãi</a></li>
+                        <li><a href="">Bán chạy nhất</a></li>
+                        <li><a href="">Hàng mới về</a></li>
+                    </ul>
+                </li>
+                <li><a href="">Liên hệ</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="headerSite">
+        <div class="container">
+            <div class="headerSite__content">
+                <div class="headerSite__social"><a><span class="fa fa-facebook"></span></a><a><span class="fa fa-twitter"></span></a><a><span class="fa fa-youtube"></span></a><a><span class="fa fa-skype"></span></a><a><span class="fa fa-google-plus"></span></a></div><a class="headerSite__logo"><img src="~/asset/img/logo.png" /></a><a class="headerSite__cart cart" href="">Giỏ hàng - 10 sản phẩm<span class="cart__count">10</span></a>
+            </div>
+            <div class="headerSite__menu">
+                <div class="menu-wrap menuHorizontal">
+                    <ul class="menu">
+                        <li><a href=""><span class="fa fa-home"></span>Trang chủ</a></li>
+                        <li>
+                            <a href="">Sản phẩm</a>
+                            <ul class="sub-menu">
+                                <li class="has-child">
+                                    <a href="">TRái cây nhập khẩu</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="">TRái cây nhập khẩu</a></li>
+                                        <li><a href="">TRái cây xuất khẩu</a></li>
+                                        <li><a href="">TRái cây sấy khô</a></li>
+                                        <li><a href="">TRái cây theo mùa</a></li>
+                                        <li><a href="">khuyến mãi</a></li>
+                                        <li><a href="">Bán chạy nhất</a></li>
+                                        <li><a href="">Hàng mới về</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="">TRái cây xuất khẩu</a></li>
+                                <li><a href="">TRái cây sấy khô</a></li>
+                                <li><a href="">TRái cây theo mùa</a></li>
+                                <li><a href="">khuyến mãi</a></li>
+                                <li><a href="">Bán chạy nhất</a></li>
+                                <li><a href="">Hàng mới về</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="">Liên hệ</a></li>
+                    </ul>
+                    <div class="clearfix"></div>
+                </div>
+                <form class="formSearch">
+                    <input class="formSearch__input" placeholder="Nhập nội dung tìm kiếm" />
+                    <button class="formSearch__button"><span class="fa fa-search"></span></button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="banner-home">
+        <div class="inner">
+            <div class="owl-carousel" id="sliderHome">
+                <div>
+                    <div class="caption">
+                        <h3 class="title">Eat healthy, be nutrition wealthy</h3><a class="btn" href="">Mua ngay ›</a>
+                    </div><img src="~/asset/img/data/banner.png" />
+                </div>
+                <div>
+                    <div class="caption">
+                        <h3 class="title">Eat healthy, be nutrition wealthy</h3><a class="btn" href="">Mua ngay ›</a>
+                    </div><img src="~/asset/img/data/banner.png" />
+                </div>
+                <div>
+                    <div class="caption">
+                        <h3 class="title">Eat healthy, be nutrition wealthy</h3><a class="btn" href="">Mua ngay ›</a>
+                    </div><img src="~/asset/img/data/banner.png" />
+                </div>
+                <div>
+                    <div class="caption">
+                        <h3 class="title">Eat healthy, be nutrition wealthy</h3><a class="btn" href="">Mua ngay ›</a>
+                    </div><img src="~/asset/img/data/banner.png" />
+                </div>
+            </div>
+        </div>
+    </div>
+    @RenderBody()
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 hidden-xs hidden-sm">
+                <div class="menuCategory menuVertical">
+                    <h3 class="titeMenuHome"><span class="text">Danh mục sản phẩm</span></h3>
+                    <ul class="menu">
+                        <li class="has-child">
+                            <a href="">Trái cây nhập khẩu</a>
+                            <ul class="sub-menu">
+                                <li><a href="">Trái cây nhập khẩu</a></li>
+                                <li><a href="">Trái cây xuất khẩu</a></li>
+                                <li><a href="">Trái cây sấy khô</a></li>
+                                <li><a href="">Trái cây theo mùa</a></li>
+                                <li><a href="">khuyến mãi</a></li>
+                                <li><a href="">Bán chạy nhất</a></li>
+                                <li><a href="">Hàng mới về</a></li>
+                            </ul>
+                        </li>
+                        <li class="has-child">
+                            <a href="">Trái cây xuất khẩu</a>
+                            <ul class="sub-menu">
+                                <li><a href="">Trái cây nhập khẩu</a></li>
+                                <li><a href="">Trái cây xuất khẩu</a></li>
+                                <li><a href="">Trái cây sấy khô</a></li>
+                                <li><a href="">Trái cây theo mùa</a></li>
+                                <li><a href="">khuyến mãi</a></li>
+                                <li><a href="">Bán chạy nhất</a></li>
+                                <li><a href="">Hàng mới về</a></li>
+                            </ul>
+                        </li>
+                        <li class="has-child">
+                            <a href="">Trái cây sấy khô</a>
+                            <ul class="sub-menu">
+                                <li><a href="">Trái cây nhập khẩu</a></li>
+                            </ul>
+                        </li>
+                        <li class="has-child">
+                            <a href="">Trái cây theo mùa</a>
+                            <ul class="sub-menu">
+                                <li><a href="">Trái cây nhập khẩu</a></li>
+                            </ul>
+                        </li>
+                        <li class="has-child">
+                            <a href="">khuyến mãi</a>
+                            <ul class="sub-menu">
+                                <li><a href="">Trái cây nhập khẩu</a></li>
+                            </ul>
+                        </li>
+                        <li class="has-child">
+                            <a href="">Bán chạy nhất</a>
+                            <ul class="sub-menu">
+                                <li><a href="">Trái cây nhập khẩu</a></li>
+                            </ul>
+                        </li>
+                        <li class="has-child">
+                            <a href="">Hàng mới về</a>
+                            <ul class="sub-menu">
+                                <li><a href="">Trái cây nhập khẩu</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <div class="sliderProduct">
+                    <h3 class="sliderProduct__title"><span class="sliderProduct__title__text">Sản phẩm bán chạy</span></h3>
+                    <div class="wrapSliderOwl">
+                        <div class="owl-carousel" id="product-best-sale">
+                            <div class="productItem ">
+                                <div class="productItem__thumbnail" href="">
+                                    <a class="frame-img1" href=""><img src="~/asset/img/data/sp1.png" /></a>
+                                    <div class="flashAlert"><span class="hot">Hot</span><span class="sale">Sale</span></div>
+                                    <div class="toolBox"><a class="item"><span class="fa fa-shopping-basket"></span></a><a class="item"><span class="fa fa-heart-o"></span></a><a class="item"><span class="fa fa-search"></span></a><a class="item"><span class="fa fa-facebook"></span></a></div>
+                                </div>
+                                <div class="productItem__summary">
+                                    <header class="productItem__title"> <a href="">Cherry Mỹ</a></header>
+                                    <div class="productItem__blockPrice"><span class="productItem__priceOld">203.000 <sup>đ</sup></span><span class="productItem__priceNew">150.000 <sup>đ</sup></span><span class="weight">/ 1kg</span></div>
+                                </div>
+                            </div>
+                            <div class="productItem ">
+                                <div class="productItem__thumbnail" href="">
+                                    <a class="frame-img1" href=""><img src="~/asset/img/data/sp1.png" /></a>
+                                    <div class="flashAlert"><span class="hot">Hot</span><span class="sale">Sale</span></div>
+                                    <div class="toolBox"><a class="item"><span class="fa fa-shopping-basket"></span></a><a class="item"><span class="fa fa-heart-o"></span></a><a class="item"><span class="fa fa-search"></span></a><a class="item"><span class="fa fa-facebook"></span></a></div>
+                                </div>
+                                <div class="productItem__summary">
+                                    <header class="productItem__title"> <a href="">Cherry Mỹ</a></header>
+                                    <div class="productItem__blockPrice"><span class="productItem__priceOld">203.000 <sup>đ</sup></span><span class="productItem__priceNew">150.000 <sup>đ</sup></span><span class="weight">/ 1kg</span></div>
+                                </div>
+                            </div>
+                            <div class="productItem ">
+                                <div class="productItem__thumbnail" href="">
+                                    <a class="frame-img1" href=""><img src="~/asset/img/data/sp1.png" /></a>
+                                    <div class="flashAlert"><span class="hot">Hot</span><span class="sale">Sale</span></div>
+                                    <div class="toolBox"><a class="item"><span class="fa fa-shopping-basket"></span></a><a class="item"><span class="fa fa-heart-o"></span></a><a class="item"><span class="fa fa-search"></span></a><a class="item"><span class="fa fa-facebook"></span></a></div>
+                                </div>
+                                <div class="productItem__summary">
+                                    <header class="productItem__title"> <a href="">Cherry Mỹ</a></header>
+                                    <div class="productItem__blockPrice"><span class="productItem__priceOld">203.000 <sup>đ</sup></span><span class="productItem__priceNew">150.000 <sup>đ</sup></span><span class="weight">/ 1kg</span></div>
+                                </div>
+                            </div>
+                            <div class="productItem ">
+                                <div class="productItem__thumbnail" href="">
+                                    <a class="frame-img1" href=""><img src="~/asset/img/data/sp1.png" /></a>
+                                    <div class="flashAlert"><span class="hot">Hot</span><span class="sale">Sale</span></div>
+                                    <div class="toolBox"><a class="item"><span class="fa fa-shopping-basket"></span></a><a class="item"><span class="fa fa-heart-o"></span></a><a class="item"><span class="fa fa-search"></span></a><a class="item"><span class="fa fa-facebook"></span></a></div>
+                                </div>
+                                <div class="productItem__summary">
+                                    <header class="productItem__title"> <a href="">Cherry Mỹ</a></header>
+                                    <div class="productItem__blockPrice"><span class="productItem__priceOld">203.000 <sup>đ</sup></span><span class="productItem__priceNew">150.000 <sup>đ</sup></span><span class="weight">/ 1kg</span></div>
+                                </div>
+                            </div>
+                            <div class="productItem ">
+                                <div class="productItem__thumbnail" href="">
+                                    <a class="frame-img1" href=""><img src="~/asset/img/data/sp1.png" /></a>
+                                    <div class="flashAlert"><span class="hot">Hot</span><span class="sale">Sale</span></div>
+                                    <div class="toolBox"><a class="item"><span class="fa fa-shopping-basket"></span></a><a class="item"><span class="fa fa-heart-o"></span></a><a class="item"><span class="fa fa-search"></span></a><a class="item"><span class="fa fa-facebook"></span></a></div>
+                                </div>
+                                <div class="productItem__summary">
+                                    <header class="productItem__title"> <a href="">Cherry Mỹ</a></header>
+                                    <div class="productItem__blockPrice"><span class="productItem__priceOld">203.000 <sup>đ</sup></span><span class="productItem__priceNew">150.000 <sup>đ</sup></span><span class="weight">/ 1kg</span></div>
+                                </div>
+                            </div>
+                            <div class="productItem ">
+                                <div class="productItem__thumbnail" href="">
+                                    <a class="frame-img1" href=""><img src="~/asset/img/data/sp1.png" /></a>
+                                    <div class="flashAlert"><span class="hot">Hot</span><span class="sale">Sale</span></div>
+                                    <div class="toolBox"><a class="item"><span class="fa fa-shopping-basket"></span></a><a class="item"><span class="fa fa-heart-o"></span></a><a class="item"><span class="fa fa-search"></span></a><a class="item"><span class="fa fa-facebook"></span></a></div>
+                                </div>
+                                <div class="productItem__summary">
+                                    <header class="productItem__title"> <a href="">Cherry Mỹ</a></header>
+                                    <div class="productItem__blockPrice"><span class="productItem__priceOld">203.000 <sup>đ</sup></span><span class="productItem__priceNew">150.000 <sup>đ</sup></span><span class="weight">/ 1kg</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="productHome">
+            <header class="productHome_heading heading"><span class="heading__text">Hàng mới về</span></header>
+            <div class="productHome__body products">
+                <div class="row row-10">
+                    <div class="col-sm-4 col-md-3 col-xs-6 col">
+                        <div class="productItem ">
+                            <div class="productItem__thumbnail" href="">
+                                <a class="frame-img1" href=""><img src="~/asset/img/data/sp1.png" /></a>
+                                <div class="flashAlert"><span class="hot">Hot</span><span class="sale">Sale</span></div>
+                                <div class="toolBox"><a class="item"><span class="fa fa-shopping-basket"></span></a><a class="item"><span class="fa fa-heart-o"></span></a><a class="item"><span class="fa fa-search"></span></a><a class="item"><span class="fa fa-facebook"></span></a></div>
+                            </div>
+                            <div class="productItem__summary">
+                                <header class="productItem__title"> <a href="">Cherry Mỹ</a></header>
+                                <div class="productItem__blockPrice"><span class="productItem__priceOld">203.000 <sup>đ</sup></span><span class="productItem__priceNew">150.000 <sup>đ</sup></span><span class="weight">/ 1kg</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 col-md-3 col-xs-6 col">
+                        <div class="productItem ">
+                            <div class="productItem__thumbnail" href="">
+                                <a class="frame-img1" href=""><img src="~/asset/img/data/sp1.png" /></a>
+                                <div class="flashAlert"><span class="hot">Hot</span><span class="sale">Sale</span></div>
+                                <div class="toolBox"><a class="item"><span class="fa fa-shopping-basket"></span></a><a class="item"><span class="fa fa-heart-o"></span></a><a class="item"><span class="fa fa-search"></span></a><a class="item"><span class="fa fa-facebook"></span></a></div>
+                            </div>
+                            <div class="productItem__summary">
+                                <header class="productItem__title"> <a href="">Cherry Mỹ</a></header>
+                                <div class="productItem__blockPrice"><span class="productItem__priceOld">203.000 <sup>đ</sup></span><span class="productItem__priceNew">150.000 <sup>đ</sup></span><span class="weight">/ 1kg</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 col-md-3 col-xs-6 col">
+                        <div class="productItem ">
+                            <div class="productItem__thumbnail" href="">
+                                <a class="frame-img1" href=""><img src="~/asset/img/data/sp1.png" /></a>
+                                <div class="flashAlert"><span class="hot">Hot</span><span class="sale">Sale</span></div>
+                                <div class="toolBox"><a class="item"><span class="fa fa-shopping-basket"></span></a><a class="item"><span class="fa fa-heart-o"></span></a><a class="item"><span class="fa fa-search"></span></a><a class="item"><span class="fa fa-facebook"></span></a></div>
+                            </div>
+                            <div class="productItem__summary">
+                                <header class="productItem__title"> <a href="">Cherry Mỹ</a></header>
+                                <div class="productItem__blockPrice"><span class="productItem__priceOld">203.000 <sup>đ</sup></span><span class="productItem__priceNew">150.000 <sup>đ</sup></span><span class="weight">/ 1kg</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 col-md-3 col-xs-6 col">
+                        <div class="productItem ">
+                            <div class="productItem__thumbnail" href="">
+                                <a class="frame-img1" href=""><img src="~/asset/img/data/sp1.png" /></a>
+                                <div class="flashAlert"><span class="hot">Hot</span><span class="sale">Sale</span></div>
+                                <div class="toolBox"><a class="item"><span class="fa fa-shopping-basket"></span></a><a class="item"><span class="fa fa-heart-o"></span></a><a class="item"><span class="fa fa-search"></span></a><a class="item"><span class="fa fa-facebook"></span></a></div>
+                            </div>
+                            <div class="productItem__summary">
+                                <header class="productItem__title"> <a href="">Cherry Mỹ</a></header>
+                                <div class="productItem__blockPrice"><span class="productItem__priceOld">203.000 <sup>đ</sup></span><span class="productItem__priceNew">150.000 <sup>đ</sup></span><span class="weight">/ 1kg</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 col-md-3 col-xs-6 col">
+                        <div class="productItem ">
+                            <div class="productItem__thumbnail" href="">
+                                <a class="frame-img1" href=""><img src="~/asset/img/data/sp1.png" /></a>
+                                <div class="flashAlert"><span class="hot">Hot</span><span class="sale">Sale</span></div>
+                                <div class="toolBox"><a class="item"><span class="fa fa-shopping-basket"></span></a><a class="item"><span class="fa fa-heart-o"></span></a><a class="item"><span class="fa fa-search"></span></a><a class="item"><span class="fa fa-facebook"></span></a></div>
+                            </div>
+                            <div class="productItem__summary">
+                                <header class="productItem__title"> <a href="">Cherry Mỹ</a></header>
+                                <div class="productItem__blockPrice"><span class="productItem__priceOld">203.000 <sup>đ</sup></span><span class="productItem__priceNew">150.000 <sup>đ</sup></span><span class="weight">/ 1kg</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 col-md-3 col-xs-6 col">
+                        <div class="productItem ">
+                            <div class="productItem__thumbnail" href="">
+                                <a class="frame-img1" href=""><img src="~/asset/img/data/sp1.png" /></a>
+                                <div class="flashAlert"><span class="hot">Hot</span><span class="sale">Sale</span></div>
+                                <div class="toolBox"><a class="item"><span class="fa fa-shopping-basket"></span></a><a class="item"><span class="fa fa-heart-o"></span></a><a class="item"><span class="fa fa-search"></span></a><a class="item"><span class="fa fa-facebook"></span></a></div>
+                            </div>
+                            <div class="productItem__summary">
+                                <header class="productItem__title"> <a href="">Cherry Mỹ</a></header>
+                                <div class="productItem__blockPrice"><span class="productItem__priceOld">203.000 <sup>đ</sup></span><span class="productItem__priceNew">150.000 <sup>đ</sup></span><span class="weight">/ 1kg</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 col-md-3 col-xs-6 col">
+                        <div class="productItem ">
+                            <div class="productItem__thumbnail" href="">
+                                <a class="frame-img1" href=""><img src="~/asset/img/data/sp1.png" /></a>
+                                <div class="flashAlert"><span class="hot">Hot</span><span class="sale">Sale</span></div>
+                                <div class="toolBox"><a class="item"><span class="fa fa-shopping-basket"></span></a><a class="item"><span class="fa fa-heart-o"></span></a><a class="item"><span class="fa fa-search"></span></a><a class="item"><span class="fa fa-facebook"></span></a></div>
+                            </div>
+                            <div class="productItem__summary">
+                                <header class="productItem__title"> <a href="">Cherry Mỹ</a></header>
+                                <div class="productItem__blockPrice"><span class="productItem__priceOld">203.000 <sup>đ</sup></span><span class="productItem__priceNew">150.000 <sup>đ</sup></span><span class="weight">/ 1kg</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 col-md-3 col-xs-6 col">
+                        <div class="productItem ">
+                            <div class="productItem__thumbnail" href="">
+                                <a class="frame-img1" href=""><img src="~/asset/img/data/sp1.png" /></a>
+                                <div class="flashAlert"><span class="hot">Hot</span><span class="sale">Sale</span></div>
+                                <div class="toolBox"><a class="item"><span class="fa fa-shopping-basket"></span></a><a class="item"><span class="fa fa-heart-o"></span></a><a class="item"><span class="fa fa-search"></span></a><a class="item"><span class="fa fa-facebook"></span></a></div>
+                            </div>
+                            <div class="productItem__summary">
+                                <header class="productItem__title"> <a href="">Cherry Mỹ</a></header>
+                                <div class="productItem__blockPrice"><span class="productItem__priceOld">203.000 <sup>đ</sup></span><span class="productItem__priceNew">150.000 <sup>đ</sup></span><span class="weight">/ 1kg</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 col-md-3 col-xs-6 col">
+                        <div class="productItem ">
+                            <div class="productItem__thumbnail" href="">
+                                <a class="frame-img1" href=""><img src="~/asset/img/data/sp1.png" /></a>
+                                <div class="flashAlert"><span class="hot">Hot</span><span class="sale">Sale</span></div>
+                                <div class="toolBox"><a class="item"><span class="fa fa-shopping-basket"></span></a><a class="item"><span class="fa fa-heart-o"></span></a><a class="item"><span class="fa fa-search"></span></a><a class="item"><span class="fa fa-facebook"></span></a></div>
+                            </div>
+                            <div class="productItem__summary">
+                                <header class="productItem__title"> <a href="">Cherry Mỹ</a></header>
+                                <div class="productItem__blockPrice"><span class="productItem__priceOld">203.000 <sup>đ</sup></span><span class="productItem__priceNew">150.000 <sup>đ</sup></span><span class="weight">/ 1kg</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 col-md-3 col-xs-6 col">
+                        <div class="productItem ">
+                            <div class="productItem__thumbnail" href="">
+                                <a class="frame-img1" href=""><img src="~/asset/img/data/sp1.png" /></a>
+                                <div class="flashAlert"><span class="hot">Hot</span><span class="sale">Sale</span></div>
+                                <div class="toolBox"><a class="item"><span class="fa fa-shopping-basket"></span></a><a class="item"><span class="fa fa-heart-o"></span></a><a class="item"><span class="fa fa-search"></span></a><a class="item"><span class="fa fa-facebook"></span></a></div>
+                            </div>
+                            <div class="productItem__summary">
+                                <header class="productItem__title"> <a href="">Cherry Mỹ</a></header>
+                                <div class="productItem__blockPrice"><span class="productItem__priceOld">203.000 <sup>đ</sup></span><span class="productItem__priceNew">150.000 <sup>đ</sup></span><span class="weight">/ 1kg</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 col-md-3 col-xs-6 col">
+                        <div class="productItem ">
+                            <div class="productItem__thumbnail" href="">
+                                <a class="frame-img1" href=""><img src="~/asset/img/data/sp1.png" /></a>
+                                <div class="flashAlert"><span class="hot">Hot</span><span class="sale">Sale</span></div>
+                                <div class="toolBox"><a class="item"><span class="fa fa-shopping-basket"></span></a><a class="item"><span class="fa fa-heart-o"></span></a><a class="item"><span class="fa fa-search"></span></a><a class="item"><span class="fa fa-facebook"></span></a></div>
+                            </div>
+                            <div class="productItem__summary">
+                                <header class="productItem__title"> <a href="">Cherry Mỹ</a></header>
+                                <div class="productItem__blockPrice"><span class="productItem__priceOld">203.000 <sup>đ</sup></span><span class="productItem__priceNew">150.000 <sup>đ</sup></span><span class="weight">/ 1kg</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 col-md-3 col-xs-6 col">
+                        <div class="productItem ">
+                            <div class="productItem__thumbnail" href="">
+                                <a class="frame-img1" href=""><img src="~/asset/img/data/sp1.png" /></a>
+                                <div class="flashAlert"><span class="hot">Hot</span><span class="sale">Sale</span></div>
+                                <div class="toolBox"><a class="item"><span class="fa fa-shopping-basket"></span></a><a class="item"><span class="fa fa-heart-o"></span></a><a class="item"><span class="fa fa-search"></span></a><a class="item"><span class="fa fa-facebook"></span></a></div>
+                            </div>
+                            <div class="productItem__summary">
+                                <header class="productItem__title"> <a href="">Cherry Mỹ</a></header>
+                                <div class="productItem__blockPrice"><span class="productItem__priceOld">203.000 <sup>đ</sup></span><span class="productItem__priceNew">150.000 <sup>đ</sup></span><span class="weight">/ 1kg</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="service">
+        <div class="container">
+            <h3 class="titeMenuHome heading heading--white"><span class="text heading__text">Tiêu chí khách hàng</span></h3>
+            <div class="service__body row">
+                <div class="service__item col-xs-6 col-md-3">
+                    <div class="service__icon"><span class="frame-img1_3"><img src="~/asset/img/data/tc1.png" /></span></div>
+                    <header class="service__summary">
+                        <div class="service__title">giao hàng miễn phí</div>
+                        <div class="service__des">Trên 500.000<sup>đ</sup></div>
+                    </header>
+                </div>
+                <div class="service__item col-xs-6 col-md-3">
+                    <div class="service__icon"><span class="frame-img1_3"><img src="~/asset/img/data/tc2.png" /></span></div>
+                    <header class="service__summary">
+                        <div class="service__title">hỗ trợ khách hàng</div>
+                        <div class="service__des">Hỗ trợ 24/7</div>
+                    </header>
+                </div>
+                <div class="service__item col-xs-6 col-md-3">
+                    <div class="service__icon"><span class="frame-img1_3"><img src="~/asset/img/data/tc3.png" /></span></div>
+                    <header class="service__summary">
+                        <div class="service__title">thanh t0án an toàn</div>
+                        <div class="service__des">Xác nhận</div>
+                    </header>
+                </div>
+                <div class="service__item col-xs-6 col-md-3">
+                    <div class="service__icon"><span class="frame-img1_3"><img src="~/asset/img/data/tc4.png" /></span></div>
+                    <header class="service__summary">
+                        <div class="service__title">cam kết chất lượng</div>
+                        <div class="service__des">Dịch vụ tốt nhất</div>
+                    </header>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="newsHome">
+        <div class="container">
+            <h3 class="titeMenuHome heading heading--black"><span class="text heading__text">tin tức sự kiện</span></h3>
+            <div class="wrapList newsList">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="newsItem">
+                            <a class="frame-img1_3 newsItem__thumbnai" href=""><img src="~/asset/img/data/news1.png" /></a>
+                            <div class="newsItem__summary">
+                                <header class="newsItem__title">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt sed do eiusmod tempor incididunt</header>
+                                <div class="newsItem__postMeta"><span class="fa fa-calendar"></span> 24/12/2016   | <span class="fa fa-eye"></span> 450</div>
+                                <div class="newsItem__des">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore mpor incididunt ut labore et dolore sed do eiusmod tempor incididunt ut labore et dolore mpor incididunt ut labore et dolore</div>
+                                <div><a class="readmore" href="">Xem thêm</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="newsItem">
+                            <a class="frame-img1_3 newsItem__thumbnai" href=""><img src="~/asset/img/data/news2.png" /></a>
+                            <div class="newsItem__summary">
+                                <header class="newsItem__title">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt sed do eiusmod tempor incididunt</header>
+                                <div class="newsItem__postMeta"><span class="fa fa-calendar"></span> 24/12/2016   | <span class="fa fa-eye"></span> 450</div>
+                                <div class="newsItem__des">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore mpor incididunt ut labore et dolore sed do eiusmod tempor incididunt ut labore et dolore mpor incididunt ut labore et dolore</div>
+                                <div><a class="readmore" href="">Xem thêm</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="newsItem">
+                            <a class="frame-img1_3 newsItem__thumbnai" href=""><img src="~/asset/img/data/news3.png" /></a>
+                            <div class="newsItem__summary">
+                                <header class="newsItem__title">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt sed do eiusmod tempor incididunt</header>
+                                <div class="newsItem__postMeta"><span class="fa fa-calendar"></span> 24/12/2016   | <span class="fa fa-eye"></span> 450</div>
+                                <div class="newsItem__des">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore mpor incididunt ut labore et dolore sed do eiusmod tempor incididunt ut labore et dolore mpor incididunt ut labore et dolore</div>
+                                <div><a class="readmore" href="">Xem thêm</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="customer">
+        <div class="container">
+            <h3 class="titeMenuHome heading heading--black"><span class="text heading__text">Khách hàng nói về chúng tôi</span></h3>
+            <div class="wrapList listCustomer owl-carousel" id="listCustomer">
+                <div class="listCustomer__item">
+                    <header class="listCustomer__heading"><span class="listCustomer__avatar"><span class="frame-img1"><img src="~/asset/img/data/avatar1.png" /></span></span><span class="listCustomer__infoUser"><b class="name">Mrs. Xuan Hien</b><span class="job">Senior Graphic Designer</span></span></header>
+                    <div class="listCustomer__des">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</div>
+                </div>
+                <div class="listCustomer__item">
+                    <header class="listCustomer__heading"><span class="listCustomer__avatar"><span class="frame-img1"><img src="~/asset/img/data/avatar2.jpg" /></span></span><span class="listCustomer__infoUser"><b class="name">Mrs. Xuan Hien</b><span class="job">Senior Graphic Designer</span></span></header>
+                    <div class="listCustomer__des">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</div>
+                </div>
+                <div class="listCustomer__item">
+                    <header class="listCustomer__heading"><span class="listCustomer__avatar"><span class="frame-img1"><img src="~/asset/img/data/avatar2.jpg" /></span></span><span class="listCustomer__infoUser"><b class="name">Mrs. Xuan Hien</b><span class="job">Senior Graphic Designer</span></span></header>
+                    <div class="listCustomer__des">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</div>
+                </div>
+                <div class="listCustomer__item">
+                    <header class="listCustomer__heading"><span class="listCustomer__avatar"><span class="frame-img1"><img src="~/asset/img/data/avatar2.jpg" /></span></span><span class="listCustomer__infoUser"><b class="name">Mrs. Xuan Hien</b><span class="job">Senior Graphic Designer</span></span></header>
+                    <div class="listCustomer__des">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</div>
+                </div>
+                <div class="listCustomer__item">
+                    <header class="listCustomer__heading"><span class="listCustomer__avatar"><span class="frame-img1"><img src="~/asset/img/data/avatar2.jpg" /></span></span><span class="listCustomer__infoUser"><b class="name">Mrs. Xuan Hien</b><span class="job">Senior Graphic Designer</span></span></header>
+                    <div class="listCustomer__des">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</div>
+                </div>
+                <div class="listCustomer__item">
+                    <header class="listCustomer__heading"><span class="listCustomer__avatar"><span class="frame-img1"><img src="~/asset/img/data/avatar2.jpg" /></span></span><span class="listCustomer__infoUser"><b class="name">Mrs. Xuan Hien</b><span class="job">Senior Graphic Designer</span></span></header>
+                    <div class="listCustomer__des">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</div>
+                </div>
+                <div class="listCustomer__item">
+                    <header class="listCustomer__heading"><span class="listCustomer__avatar"><span class="frame-img1"><img src="~/asset/img/data/avatar2.jpg" /></span></span><span class="listCustomer__infoUser"><b class="name">Mrs. Xuan Hien</b><span class="job">Senior Graphic Designer</span></span></header>
+                    <div class="listCustomer__des">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</div>
+                </div>
+                <div class="listCustomer__item">
+                    <header class="listCustomer__heading"><span class="listCustomer__avatar"><span class="frame-img1"><img src="~/asset/img/data/avatar3.jpg" /></span></span><span class="listCustomer__infoUser"><b class="name">Mrs. Xuan Hien</b><span class="job">Senior Graphic Designer</span></span></header>
+                    <div class="listCustomer__des">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="owlPartner">
+        <div class="container">
+            <div class="col-xs-12">
+                <div class="owl-carousel" id="owlPartner"><a><span class="frame-img frame-img1_3"><img src="~/asset/img/data/logo1.png" /></span></a><a><span class="frame-img frame-img1_3"><img src="~/asset/img/data/logo2.png" /></span></a><a><span class="frame-img frame-img1_3"><img src="~/asset/img/data/logo3.png" /></span></a><a><span class="frame-img frame-img1_3"><img src="~/asset/img/data/logo4.png" /></span></a><a><span class="frame-img frame-img1_3"><img src="~/asset/img/data/logo5.png" /></span></a><a><span class="frame-img frame-img1_3"><img src="~/asset/img/data/logo6.png" /></span></a><a><span class="frame-img frame-img1_3"><img src="~/asset/img/data/logo1.png" /></span></a><a><span class="frame-img frame-img1_3"><img src="~/asset/img/data/logo2.png" /></span></a><a><span class="frame-img frame-img1_3"><img src="~/asset/img/data/logo3.png" /></span></a><a><span class="frame-img frame-img1_3"><img src="~/asset/img/data/logo4.png" /></span></a><a><span class="frame-img frame-img1_3"><img src="~/asset/img/data/logo5.png" /></span></a><a><span class="frame-img frame-img1_3"><img src="~/asset/img/data/logo6.png" /></span></a></div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div><a id="backtotop" href=""></a>
+    <div class="footerSite">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 col-md-3">
+                    <div class="footerCol">
+                        <header class="footerCol__title">Danh mục</header>
+                        <div class="footerCol__menu">
+                            <div class="menuFooter">
+                                <ul class="menu">
+                                    <li><a href="">Trang chủ</a></li>
+                                    <li><a href="">Giới thiệu</a></li>
+                                    <li><a href="">Sản phẩm</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-3">
+                    <div class="footerCol">
+                        <header class="footerCol__title">Sản phẩm</header>
+                        <div class="footerCol__menu">
+                            <div class="menuFooter">
+                                <ul class="menu">
+                                    <li><a href="">Trang chủ</a></li>
+                                    <li><a href="">Giới thiệu</a></li>
+                                    <li><a href="">Sản phẩm</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-3">
+                    <div class="footerCol">
+                        <header class="footerCol__title">Liên hệ</header>
+                        <div class="footerCol__address">
+                            <div class="contentMenu">
+                                <p class="lineIcon"><span class="fa fa-map-marker"></span>36 Đường số 49, Phường Tân Tạo, Quận Bình Tân, HCM</p>
+                                <p class="lineIcon"><span class="fa fa-phone"></span>08. 62744207</p>
+                                <p class="lineIcon"><span class="fa fa-phone"></span>0908 261 537</p>
+                                <p class="lineIcon"><span class="fa fa-envelope"></span>freshfruit@gmail.com</p>
+                                <p class="lineSocial"><a><span class="fa fa-facebook"></span></a><a><span class="fa fa-twitter"></span></a><a><span class="fa fa-google-plus"></span></a><a><span class="fa fa-youtube"></span></a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-3">
+                    <div class="footerCol">
+                        <header class="footerCol__title">Chúng tôi trên Instagram</header>
+                        <div>
+                            <div class="instagram">
+                                <div class="row row-5">
+                                    <div class="col-xs-4 col m-b-10"><a href=""><img src="~/asset/img/data/news3.png" /></a></div>
+                                    <div class="col-xs-4 col m-b-10"><a href=""><img src="~/asset/img/data/news3.png" /></a></div>
+                                    <div class="col-xs-4 col m-b-10"><a href=""><img src="~/asset/img/data/news3.png" /></a></div>
+                                    <div class="col-xs-4 col m-b-10"><a href=""><img src="~/asset/img/data/news3.png" /></a></div>
+                                    <div class="col-xs-4 col m-b-10"><a href=""><img src="~/asset/img/data/news3.png" /></a></div>
+                                    <div class="col-xs-4 col m-b-10"><a href=""><img src="~/asset/img/data/news3.png" /></a></div>
+                                    <div class="col-xs-4 col m-b-10"><a href=""><img src="~/asset/img/data/news3.png" /></a></div>
+                                    <div class="col-xs-4 col m-b-10"><a href=""><img src="~/asset/img/data/news3.png" /></a></div>
+                                    <div class="col-xs-4 col m-b-10"><a href=""><img src="~/asset/img/data/news3.png" /></a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

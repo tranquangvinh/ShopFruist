@@ -1,0 +1,216 @@
+.headerSite {
+    background-color: @colorPrimary;
+    @media(max-width: 991px) {
+        display: none;
+    }
+    &__social {
+        position: absolute;
+        padding-left: 15px;
+        top: 50px;
+        left:0;
+        a {
+            color: #fff;
+            display: inline-block;
+            margin-right: 5px;
+            .fa {
+                background-color: #aeaeae;
+                width: 25px;
+                height: 25px;
+                border-radius: 50%;
+                display: inline-block;
+                line-height: 25px;
+                text-align: center;
+            }
+        }
+    }
+    &__content {
+        background-color: #fff;
+        position: relative;
+    }
+    &__cart {
+        position: absolute;
+        right:0;
+        top: 55px;
+        padding-right: 15px;
+    }
+    &__logo {
+        padding-top: 35px;
+        padding-bottom: 25px;
+        display: block;
+        text-align: center;
+    }
+
+    &__menu {
+        border-top: 1px solid #d7d7d7;
+        background-color: #fff;
+        position: absolute;
+        left:15px;
+        right:15px;
+        top:100%;
+        z-index: 99;
+        box-shadow: 0 2px 4px -2px rgba(0, 0, 0, 0.3);
+        .formSearch {
+            position: absolute;
+            right:0;
+            top: 0;
+        }
+    }
+}
+.cart {
+    height: 34px;
+    line-height: 40px;
+    padding-left: 40px;
+    background-image: url("../img/cart.png");
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-position: left center;
+    color: #000000;
+    &__count {
+        color: #fff;
+        display: block;
+        padding: 2px 4px;
+        border-radius: 4px;
+        position: absolute;
+        left: 18px;
+        top: 0;
+        background-color: red;
+        line-height: normal;
+        font-size: 10px;
+    }
+}
+
+.headerSiteMobile {
+    display: none;
+    @media(max-width: 991px) {
+        display: block;
+    }
+    padding:  5px 0;
+
+    .headerSite__social {
+        position: relative;
+        top:0;
+        left:0;
+    }
+    .headerSite__cart {
+        position: relative;
+        top:0;
+        left:0;
+    }
+    .logo {
+        padding-left: 50px;
+        display: block;
+        text-align: center;
+        img {
+            height: 50px;
+        }
+    }
+
+    .btn-menu {
+        position: absolute;
+        top:10px;
+        left:10px;
+        border-radius: 4px;
+        width: 44px;
+        height: 34px;
+        background-image: url(../img/menu1600.png);
+        background-size: 20px;
+        background-position: center center;
+        background-repeat: no-repeat;
+        border: 1px solid #d7d7d7;
+    }
+    .headerFooter {
+        padding-top: 10px;
+    }
+
+    .overlayMenu {
+        position: fixed;
+        top:0;
+        bottom:0;
+        left:0;
+        right:0;
+        z-index: 999;
+        background-color: rgba(0,0,0,0.5);
+        display: none;
+    }
+
+    .menuMobile {
+        position: fixed;
+        min-width: 200px;
+        left:0;
+        top:0;
+        bottom:0;
+        z-index: 1000;
+        overflow-y: scroll;
+        -webkit-overflow-scrolling: touch;
+        background-color: #c9e047;
+        -webkit-transition: all 0.25s;
+        -moz-transition: all 0.25s;
+        -ms-transition: all 0.25s;
+        -o-transition: all 0.25s;
+        transition: all 0.25s;
+        -webkit-transform: translateX(-300px);
+        -moz-transform: translateX(-300px);
+        -ms-transform: translateX(-300px);
+        -o-transform: translateX(-300px);
+        transform: translateX(-300px);
+        &.active {
+            -webkit-transform: translateX(0);
+            -moz-transform: translateX(0);
+            -ms-transform: translateX(0);
+            -o-transform: translateX(0);
+            transform: translateX(0);
+        }
+        ul {
+            padding:0;
+        }
+        li {
+            list-style: none;
+            &.has-child {
+                > a {
+                    background-image: url("../img/icon-expand.png");
+                    background-position: 98% center;
+                    background-repeat: no-repeat;
+                }
+                &.active {
+                    > a {
+                        background-image: url("../img/icon-expand-up.png");
+                        background-position: 98% center;
+                        background-repeat: no-repeat;
+                    }
+                }
+            }
+        }
+        a {
+            display: block;
+            padding: 8px 12px;
+            color: #53830c;
+            white-space: nowrap;
+            border-bottom: 1px solid #fff;
+            .fa {
+                margin-right: 7px;
+            }
+        }
+        .sub-menu {
+            display: none;
+            padding-left: 20px;
+            background-color: #fff;
+            .has-child {
+                > a {
+                    background-image: url("../img/icon-expand-green.png");
+                    background-position: 98% center;
+                    background-repeat: no-repeat;
+                }
+                &.active {
+                    > a {
+                        background-image: url("../img/icon-expand-up-green.png");
+                        background-position: 98% center;
+                        background-repeat: no-repeat;
+                    }
+                }
+            }
+        }
+    }
+}
+* {
+    -webkit-tap-highlight-color: transparent;
+}
