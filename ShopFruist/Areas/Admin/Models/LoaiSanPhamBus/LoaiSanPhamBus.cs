@@ -30,5 +30,19 @@ namespace ShopFruist.Areas.Admin.Models.LoaiSanPhamBus
                 db.Update<LOAISANPHAM>("SET TenLoaiSanPham=@0 WHERE MaLoaiSanPham=@1", lsp.TenLoaiSanPham, lsp.MaLoaiSanPham);
             }
         }
+
+        public static void Delete(int id)
+        {
+            try
+            {
+                using (var db = new ShopFruistConnectionDB())
+                {
+                    db.Execute("delete from loaisanpham where MaLoaiSanPham = @0", id);
+                }
+            }
+            catch
+            {
+            }
+        }
     }
 }

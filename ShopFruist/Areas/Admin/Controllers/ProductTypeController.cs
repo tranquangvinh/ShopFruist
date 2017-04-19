@@ -48,6 +48,7 @@ namespace ShopFruist.Areas.Admin.Controllers
         // GET: Admin/ProductType/Delete/5
         public ActionResult Delete(int id)
         {
+            Models.LoaiSanPhamBus.LoaiSanPhamBus.Delete(id);
             return RedirectToAction("Index");
         }
     }
