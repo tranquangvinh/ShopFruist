@@ -12,5 +12,10 @@ namespace ShopFruist.Areas.Admin.Models.LoaiSanPhamBus
             var db = new ShopFruistConnectionDB();
             return db.Query<LOAISANPHAM>("select * from loaisanpham");
         }
+
+        public static void insert(LOAISANPHAM lsp)
+        {
+            lsp.Insert();
+        }
     }
 }

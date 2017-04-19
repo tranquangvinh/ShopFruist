@@ -1,0 +1,18 @@
+﻿
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create ProductType</h2>
+
+@using (Html.BeginForm())
+{
+    <div class="form">
+        <div class="form-group">
+            <label for="tensp">Tên loại sản phẩm</label>
+            <input type="text" class="form-control" id="tensp" placeholder="Tên loại Sản phẩm" name="TenLoaiSanPham">
+        </div>
+        <button type="submit" name="submit" class="btn btn-success">Thêm sản phẩm</button>
+        <button type="reset" name="reset" class="btn btn-danger">Reset</button>
+    </div>
+}

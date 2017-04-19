@@ -29,18 +29,10 @@ namespace ShopFruist.Areas.Admin.Controllers
 
         // POST: Admin/ProductType/Create
         [HttpPost]
-        public ActionResult Create(FormCollection collection)
+        public ActionResult Create(ShopFruistConnection.LOAISANPHAM lsp)
         {
-            try
-            {
-                // TODO: Add insert logic here
-
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
-            }
+            Models.LoaiSanPhamBus.LoaiSanPhamBus.insert(lsp);
+            return RedirectToAction("Create");
         }
 
         // GET: Admin/ProductType/Edit/5
