@@ -15,12 +15,6 @@ namespace ShopFruist.Areas.Admin.Controllers
             return View(ds);
         }
 
-        // GET: Admin/ProductType/Details/5
-        public ActionResult Details(int id)
-        {
-            return View();
-        }
-
         // GET: Admin/ProductType/Create
         public ActionResult Create()
         {
@@ -36,47 +30,25 @@ namespace ShopFruist.Areas.Admin.Controllers
         }
 
         // GET: Admin/ProductType/Edit/5
+
         public ActionResult Edit(int id)
         {
-            return View();
+            var lsp = Models.LoaiSanPhamBus.LoaiSanPhamBus.GetProductType(id);
+            return View(lsp);
         }
 
         // POST: Admin/ProductType/Edit/5
         [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
+        public ActionResult Edit(ShopFruistConnection.LOAISANPHAM lsp)
         {
-            try
-            {
-                // TODO: Add update logic here
-
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
-            }
+            Models.LoaiSanPhamBus.LoaiSanPhamBus.UpdateProductType(lsp);
+            return RedirectToAction("Index");
         }
 
         // GET: Admin/ProductType/Delete/5
         public ActionResult Delete(int id)
         {
-            return View();
-        }
-
-        // POST: Admin/ProductType/Delete/5
-        [HttpPost]
-        public ActionResult Delete(int id, FormCollection collection)
-        {
-            try
-            {
-                // TODO: Add delete logic here
-
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
-            }
+            return RedirectToAction("Index");
         }
     }
 }

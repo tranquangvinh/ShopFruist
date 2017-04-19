@@ -17,5 +17,18 @@ namespace ShopFruist.Areas.Admin.Models.LoaiSanPhamBus
         {
             lsp.Insert();
         }
+
+        public static LOAISANPHAM GetProductType(int id) {
+            var db = new ShopFruistConnectionDB();
+            return db.SingleOrDefault<LOAISANPHAM>("select * from loaisanpham where MaLoaiSanPham=@0", id);
+        }
+
+        public static void UpdateProductType(LOAISANPHAM lsp)
+        {
+            using (var db = new ShopFruistConnectionDB())
+            {
+                db.Update<LOAISANPHAM>("SET TenLoaiSanPham=@0 WHERE MaLoaiSanPham=@1", lsp.TenLoaiSanPham, lsp.MaLoaiSanPham);
+            }
+        }
     }
 }
