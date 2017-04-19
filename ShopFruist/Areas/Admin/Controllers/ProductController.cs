@@ -15,6 +15,9 @@ namespace ShopFruist.Areas.Admin.Controllers
         public ActionResult Index()
         {
             var ds = Models.SanPhamBus.SanPhamBus.List();
+
+            var LoaiSanPham = Models.LoaiSanPhamBus.LoaiSanPhamBus.DanhSach();
+            ViewBag.lsp = LoaiSanPham;
             return View(ds);
         }
 

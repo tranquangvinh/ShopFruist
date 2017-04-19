@@ -11,7 +11,7 @@ namespace ShopFruist.Areas.Admin.Models.SanPhamBus
         public static IEnumerable<SANPHAM> List()
         {
             var db = new ShopFruistConnectionDB();
-            return db.Query<SANPHAM>("select * from sanpham");
+            return db.Query<SANPHAM>("select * from sanpham ");
         }
 
         public static void insert(SANPHAM sp)
