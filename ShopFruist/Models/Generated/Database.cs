@@ -137,6 +137,42 @@ namespace ShopFruistConnection
 
     
 
+	[TableName("dbo.LISTIMAGE")]
+
+
+
+	[PrimaryKey("MaHinh")]
+
+
+
+
+	[ExplicitColumns]
+
+    public partial class LISTIMAGE : ShopFruistConnectionDB.Record<LISTIMAGE>  
+    {
+
+
+
+		[Column] public int MaHinh { get; set; }
+
+
+
+
+
+		[Column] public string LinkHinh { get; set; }
+
+
+
+
+
+		[Column] public int? IdSanPham { get; set; }
+
+
+
+	}
+
+    
+
 	[TableName("dbo.LOAISANPHAM")]
 
 
@@ -238,6 +274,54 @@ namespace ShopFruistConnection
 
 
 		[Column] public int? LoaiSp { get; set; }
+
+
+
+	}
+
+    
+
+	[TableName("dbo.sysdiagrams")]
+
+
+
+	[PrimaryKey("diagram_id")]
+
+
+
+
+	[ExplicitColumns]
+
+    public partial class sysdiagram : ShopFruistConnectionDB.Record<sysdiagram>  
+    {
+
+
+
+		[Column] public string name { get; set; }
+
+
+
+
+
+		[Column] public int principal_id { get; set; }
+
+
+
+
+
+		[Column] public int diagram_id { get; set; }
+
+
+
+
+
+		[Column] public int? version { get; set; }
+
+
+
+
+
+		[Column] public byte[] definition { get; set; }
 
 
 
