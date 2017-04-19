@@ -34,9 +34,19 @@
     <body>
         <div class="warp">
             <div class="sidebar">
-                <ul>
+                <ul class="menu">
                     <li>Menu</li>
-                    <li>Sảm phẩm</li>
+                    <li>
+                        <a href="@Url.Action("Index", "Product")">Sản phẩm</a>
+                        <ul class="sub-menu">
+                            <li>
+                                <a href="@Url.Action("Index", "Product")">List</a>
+                            </li>
+                            <li>
+                                <a href="@Url.Action("Create", "Product")">Add</a>
+                            </li>
+                        </ul>
+                    </li>
                 </ul>
             </div>
             <div class="content">
