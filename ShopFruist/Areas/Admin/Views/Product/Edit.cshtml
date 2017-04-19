@@ -5,18 +5,24 @@
 
 <h2>Edit Product</h2>
 
-@using (Html.BeginForm("Create", "Product", FormMethod.Post, new { enctype = "multipart/form-data" }))
+@using (Html.BeginForm("Edit", "Product", FormMethod.Post, new { enctype = "multipart/form-data" }))
             {
     <div class="">
+        <input type="hidden" name="MaSanPham" value="@Model.MaSanPham" />
         <div class="form-group">
             <label for="tensp">Tên sản phẩm</label>
             <input type="text" class="form-control" id="tensp" placeholder="Tên Sản phẩm" name="TenSanPham" value="@Model.TenSanPham">
         </div>
-        <input type="hidden" name="MaSanPham" value="@Model.MaSanPham" />
         <div class="form-group">
             <label for="gia">Giá</label>
             <input type="number" class="form-control" id="gia" placeholder="Giá sản phẩm" name="Gia" value="@Model.Gia">
         </div>
+
+        <div class="form-group">
+            <label for="gia">Giảm giá</label>
+            <input type="number" class="form-control" id="gia" placeholder="Giảm giá" name="GiamGia" value="@Model.GiamGia">
+        </div>
+
         <div class="ad-img-thumbnail">
             <img src="~/@Model.HinhAnh" alt="">
         </div>

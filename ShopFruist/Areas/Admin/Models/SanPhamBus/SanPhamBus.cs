@@ -40,5 +40,22 @@ namespace ShopFruist.Areas.Admin.Models.SanPhamBus
                 return db.SingleOrDefault<ShopFruistConnection.SANPHAM>("select * from SANPHAM where MaSanPham = @0", id);
             }
         }
+        public static void UpdateProduct(SANPHAM Sp, int valueImg)
+        {
+            if (valueImg == 0) {
+                using (var db = new ShopFruistConnectionDB())
+                {
+                    db.Update<SANPHAM>("SET TenSanPham=@0, Gia=@1, GiamGia=@2,MoTa=@3, LoaiSp=@4 WHERE MaSanPham=@5", Sp.TenSanPham, Sp.Gia, Sp.GiamGia, Sp.MoTa, Sp.LoaiSp, Sp.MaSanPham);
+                }
+            }
+            else
+            {
+                using (var db = new ShopFruistConnectionDB())
+                {
+                    db.Update<SANPHAM>("SET TenSanPham=@0, Gia=@1, GiamGia=@2, HinhAnh=@3, MoTa=@4, LoaiSp=@5 WHERE MaSanPham=@6", Sp.TenSanPham, Sp.Gia, Sp.GiamGia, Sp.HinhAnh, Sp.MoTa, Sp.LoaiSp, Sp.MaSanPham);
+                }
+            }
+           
+        }
     }
 }

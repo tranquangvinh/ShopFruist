@@ -72,10 +72,34 @@ namespace ShopFruist.Areas.Admin.Controllers
         }
 
         // POST: Admin/Product/Edit/5
-        [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
+        [HttpPost, ValidateInput(false)]
+        public ActionResult Edit(ShopFruistConnection.SANPHAM sp)
         {
-            
+            string pathValue = Server.MapPath("~/");
+
+            var hpt = HttpContext.Request.Files[0];
+            if(hpt.FileName == "")
+            {
+                Models.SanPhamBus.SanPhamBus.UpdateProduct(sp, 0);
+            }
+            else
+            {
+                if (HttpContext.Request.Files.Count > 0)
+                {
+                    if (hpt.ContentLength > 0)
+                    {
+                        string temp = hpt.FileName;
+                        string RDString = Guid.NewGuid().ToString();
+                        string fullNameImage = "upload/img/" + RDString + temp;
+                        hpt.SaveAs(pathValue + fullNameImage);
+                        sp.HinhAnh = fullNameImage;
+
+
+                    }
+                }
+                Models.SanPhamBus.SanPhamBus.UpdateProduct(sp, 1);
+            }
+          
             return RedirectToAction("Index");
         }
 
