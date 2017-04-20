@@ -75,12 +75,12 @@
                         {
                             <div class="productItem ">
                                 <div class="productItem__thumbnail" href="">
-                                    <a class="frame-img1" href="@Url.Action("Details", "Home", new {id = item.MaSanPham })"><img src="~/@item.HinhAnh" /></a>
+                                    <a class="frame-img1" href="@Url.Action("Details", "SanPham", new {id=item.MaSanPham })"><img src="~/@item.HinhAnh" /></a>
                                     <div class="flashAlert"><span class="hot">Hot</span><span class="sale">Sale</span></div>
                                     <div class="toolBox"><a class="item"><span class="fa fa-shopping-basket"></span></a><a class="item"><span class="fa fa-heart-o"></span></a><a class="item"><span class="fa fa-search"></span></a><a class="item"><span class="fa fa-facebook"></span></a></div>
                                 </div>
                                 <div class="productItem__summary">
-                                    <header class="productItem__title"> <a href="@Url.Action("Details", "Home", new {id = item.MaSanPham })">@item.TenSanPham</a></header>
+                                    <header class="productItem__title"> <a href="@Url.Action("Details", "SanPham", new {id =item.MaSanPham})">@item.TenSanPham</a></header>
                                     <div class="productItem__blockPrice"><span class="productItem__priceOld">@item.Gia<sup>đ</sup></span><span class="productItem__priceNew">@item.GiamGia<sup>đ</sup></span><span class="weight">/ 1kg</span></div>
                                 </div>
                             </div>
@@ -99,12 +99,12 @@
                     <div class="col-sm-4 col-md-3 col-xs-6 col">
                         <div class="productItem ">
                             <div class="productItem__thumbnail" href="">
-                                <a class="frame-img1" href="@Url.Action("Details", "Home", new {id = item.MaSanPham })"><img src="~/@item.HinhAnh" /></a>
+                                <a class="frame-img1" href="@Url.Action("Details", "SanPham", new {id = item.MaSanPham })"><img src="~/@item.HinhAnh" /></a>
                                 <div class="flashAlert"><span class="hot">Hot</span><span class="sale">Sale</span></div>
                                 <div class="toolBox"><a class="item"><span class="fa fa-shopping-basket"></span></a><a class="item"><span class="fa fa-heart-o"></span></a><a class="item"><span class="fa fa-search"></span></a><a class="item"><span class="fa fa-facebook"></span></a></div>
                             </div>
                             <div class="productItem__summary">
-                                <header class="productItem__title"> <a href="@Url.Action("Details", "Home", new {id = item.MaSanPham })">@item.TenSanPham</a></header>
+                                <header class="productItem__title"> <a href="@Url.Action("Details", "SanPham", new {id = item.MaSanPham })">@item.TenSanPham</a></header>
                                 <div class="productItem__blockPrice"><span class="productItem__priceOld">@item.Gia<sup>đ</sup></span><span class="productItem__priceNew">@item.GiamGia<sup>đ</sup></span><span class="weight">/ 1kg</span></div>
                             </div>
                         </div>

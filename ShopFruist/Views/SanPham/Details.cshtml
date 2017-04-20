@@ -1,0 +1,148 @@
+﻿
+@{
+    ViewBag.Title = "Details";
+}
+<link rel="stylesheet" href="~/asset/plugins/flex/flexslider.css" />
+<script src="~/asset/plugins/flex/jquery.flexslider-min.js"></script>
+<script>
+      $(document).ready(function () {
+          var itemNumber = 4;
+          var borderItem = 1;
+          var borderItemActive = 3;
+          var marginItem = 16;
+          $('#carousel').flexslider({
+              animation: "slide",
+              controlNav: false,
+              animationLoop: false,
+              slideshow: false,
+              itemWidth: ($('#carousel').width() - ((itemNumber - 1) * marginItem) + (borderItem * 2 * (itemNumber - 1) + borderItemActive * 2)) / itemNumber,
+              itemMargin: marginItem,
+              asNavFor: '#slider'
+          });
+
+          $('#slider').flexslider({
+              animation: "slide",
+              controlNav: false,
+              animationLoop: false,
+              slideshow: false,
+              sync: "#carousel"
+          });
+      });
+
+</script>
+<div class="mainContent">
+    <div class="container">
+        <div class="row">
+            <div class="primary col-md-9 col-md-push-3" id="primary">
+                <div class="primary__entry">
+                    <div class="row row-10">
+                        <div class="col-sm-7">
+                            <div class="imageProduct">
+                                <div class="flexslider" id="slider">
+                                    <ul class="slides">
+                                        <li><img src="~/@Model.HinhAnh" /></li>
+                                        <li><img src="http://thoitrangdmc.com/freshfood-html/asset/img/data/sp2.jpg" /></li>
+                                        <li><img src="http://thoitrangdmc.com/freshfood-html/asset/img/data/sp3.jpg" /></li>
+                                        <li><img src="http://thoitrangdmc.com/freshfood-html/asset/img/data/sp4.jpg" /></li>
+                                        <li><img src="http://thoitrangdmc.com/freshfood-html/asset/img/data/sp5.jpg" /></li>
+                                        <li><img src="http://thoitrangdmc.com/freshfood-html/asset/img/data/sp6.jpg" /></li>
+                                    </ul>
+                                </div>
+                                <div class="flexslider" id="carousel">
+                                    <ul class="slides">
+                                        <li><span class="frame-img1"><img src="~/@Model.HinhAnh" /></span></li>
+                                        <li><span class="frame-img1"><img src="http://thoitrangdmc.com/freshfood-html/asset/img/data/sp2.jpg" /></span></li>
+                                        <li><span class="frame-img1"><img src="http://thoitrangdmc.com/freshfood-html/asset/img/data/sp3.jpg" /></span></li>
+                                        <li><span class="frame-img1"><img src="http://thoitrangdmc.com/freshfood-html/asset/img/data/sp4.jpg" /></span></li>
+                                        <li><span class="frame-img1"><img src="http://thoitrangdmc.com/freshfood-html/asset/img/data/sp5.jpg" /></span></li>
+                                        <li><span class="frame-img1"><img src="http://thoitrangdmc.com/freshfood-html/asset/img/data/sp6.jpg" /></span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-5">
+                            <div class="summaryProduct">
+                                <h1 class="titleSinglePage">@Model.TenSanPham</h1>
+                                <div class="summaryProduct__blockPrice"><span class="summaryProduct__priceOld">@Model.Gia<sup>đ</sup></span><span class="summaryProduct__priceNew">@Model.GiamGia<sup>đ</sup></span><span class="weight">/ 1kg</span></div>
+                                <div class="meta"><span class="blockStart"><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star-half-empty"></span><span class="fa fa-star-o"></span><span class="count">(3.000.000)</span></span><span class="fa fa-eye"></span><span class="countView">11.333</span></div>
+                                <div class="meta">Chuyên mục 
+                                    @foreach (var lsp in ViewBag.LSP)
+                                    {
+                                        if (lsp.MaLoaiSanPham == Model.LoaiSp)
+                                        {
+                                            <a href="">@lsp.TenLoaiSanPham</a>
+                                        }
+                                    }
+                                </div>
+                                <div class="meta">Trạng thái còn hàng</div>
+                                <div class="shortDescription">
+                                     @Html.Raw(Model.MoTa);
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="sidebar col-md-3 col-md-pull-9" id="sidebar">
+                <div class="widgetBlock">
+                    <div class="widgetBlock__heading">
+                        <h3 class="widgetBlock__title">Danh mục sản phẩm</h3>
+                    </div>
+                    <div class="widgetBlock__content">
+                        <ul class="menuSidebar menu">
+                            <li><a href="">Tất cả sản phẩm</a></li>
+                            <li><a href="">Trái cây nhập khẩu</a></li>
+                            <li><a href="">Trái cây sấy khô</a></li>
+                            <li><a href="">Trái cây theo mùa</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="widgetBlock">
+                    <div class="widgetBlock__heading">
+                        <h3 class="widgetBlock__title">Sản phẩm bán chạy</h3>
+                    </div>
+                    <div class="widgetBlock__content">
+                        @foreach (var item in ViewBag.SanPhamBanChay)
+                        {
+                            <div class="products--styleSidebar">
+                                <div class="productItem productItem--styleSidebar">
+                                    <div class="productItem__thumbnail" href="">
+                                        <a class="frame-img1" href="@Url.Action("Details", "SanPham", new {id=item.MaSanPham })"><img src="~/@item.HinhAnh" /></a>
+                                        <div class="flashAlert"><span class="hot">Hot</span><span class="sale">Sale</span></div>
+                                    </div>
+                                    <div class="productItem__summary">
+                                        <header class="productItem__title"> <a href="@Url.Action("Details", "SanPham", new {id=item.MaSanPham })">@item.TenSanPham</a></header>
+                                        <div class="productItem__blockPrice"><span class="productItem__priceOld">@item.Gia<sup>đ</sup></span><span class="productItem__priceNew">@item.GiamGia<sup>đ</sup></span><span class="weight">/ 1kg</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="productsViewed">
+            <h4>SẢN PHẨM LIÊN QUAN</h4>
+            <div class="products">
+                <div class="row row-10">
+                    @foreach (var item in ViewBag.SanPhamLienQuan)
+                    {
+                        <div class="col-md-3 col-sm-4 col-xs-6 col">
+                            <div class="productItem ">
+                                <div class="productItem__thumbnail" href="">
+                                    <a class="frame-img1" href="@Url.Action("Details", "SanPham", new {id=item.MaSanPham })"><img src="~/@item.HinhAnh" /></a>
+                                    <div class="flashAlert"><span class="hot">Hot</span><span class="sale">Sale</span></div>
+                                    <div class="toolBox"><a class="item"><span class="fa fa-shopping-basket"></span></a><a class="item"><span class="fa fa-heart-o"></span></a><a class="item"><span class="fa fa-search"></span></a><a class="item"><span class="fa fa-facebook"></span></a></div>
+                                </div>
+                                <div class="productItem__summary">
+                                    <header class="productItem__title"> <a href="@Url.Action("Details", "SanPham", new {id=item.MaSanPham })">@item.TenSanPham</a></header>
+                                    <div class="productItem__blockPrice"><span class="productItem__priceOld">@item.Gia <sup>đ</sup></span><span class="productItem__priceNew">@item.GiamGia<sup>đ</sup></span><span class="weight">/ 1kg</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

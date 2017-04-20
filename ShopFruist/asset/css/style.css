@@ -19,7 +19,7 @@
 .service{
     background-image: url(../img/data/bg-tc.png);
 }
-.sidebar{
+.sidebar-admin{
     color: white;
     background: black;
     position: fixed;
