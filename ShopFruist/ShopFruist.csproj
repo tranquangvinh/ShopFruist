@@ -223,9 +223,10 @@
       <DependentUpon>Database.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\LoaiSanPhamBus\LoaiSanPhamBus.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\PetaPoco.cs" />
-    <Compile Include="Models\SanPhamBus\ModelsProduct.cs" />
+    <Compile Include="Models\SanPhamBus\SanPhamBus.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>

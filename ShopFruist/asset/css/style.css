@@ -28,24 +28,24 @@
     top: 0;
     left: 0;
 }
-.menu ,  .sub-menu{
+.menu-admin ,  .sub-menu-admin{
     padding: 0px;
 }
-.menu li{
+.menu-admin li{
     list-style: none;
   display: block;
     padding: 5px;
 }
-.menu li:hover{
+.menu-admin li:hover{
     background:red;
 }
-.menu li:hover .sub-menu{
+.menu-admin li:hover .sub-menu-admin{
     right: -100%; 
     opacity: 1;
     visibility: visible;
     transition: all 0.5s;
 }
-.sub-menu{
+.sub-menu-admin{
     top: 0;
     position: absolute;
     right: -150%;
@@ -56,10 +56,10 @@
     visibility: hidden;
     transition: all 0.5s;
 }
-.menu > li{
+.menu-admin  li{
   position: relative;
 }
-.menu li a{
+.menu-admin li a{
     display: block;
     color: white;
 }

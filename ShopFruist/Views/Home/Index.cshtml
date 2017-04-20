@@ -1,4 +1,116 @@
-﻿@{
+﻿@model IEnumerable<ShopFruistConnection.SANPHAM>
+@{
     ViewBag.Title = "Home Page";
 }
  
+<div class="container">
+    <div class="row">
+        <div class="col-md-4 hidden-xs hidden-sm">
+            <div class="menuCategory menuVertical">
+                <h3 class="titeMenuHome"><span class="text">Danh mục sản phẩm</span></h3>
+                <ul class="menu">
+                    <li class="has-child">
+                        <a href="">Trái cây nhập khẩu</a>
+                        <ul class="sub-menu">
+                            <li><a href="">Trái cây nhập khẩu</a></li>
+                            <li><a href="">Trái cây xuất khẩu</a></li>
+                            <li><a href="">Trái cây sấy khô</a></li>
+                            <li><a href="">Trái cây theo mùa</a></li>
+                            <li><a href="">khuyến mãi</a></li>
+                            <li><a href="">Bán chạy nhất</a></li>
+                            <li><a href="">Hàng mới về</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-child">
+                        <a href="">Trái cây xuất khẩu</a>
+                        <ul class="sub-menu">
+                            <li><a href="">Trái cây nhập khẩu</a></li>
+                            <li><a href="">Trái cây xuất khẩu</a></li>
+                            <li><a href="">Trái cây sấy khô</a></li>
+                            <li><a href="">Trái cây theo mùa</a></li>
+                            <li><a href="">khuyến mãi</a></li>
+                            <li><a href="">Bán chạy nhất</a></li>
+                            <li><a href="">Hàng mới về</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-child">
+                        <a href="">Trái cây sấy khô</a>
+                        <ul class="sub-menu">
+                            <li><a href="">Trái cây nhập khẩu</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-child">
+                        <a href="">Trái cây theo mùa</a>
+                        <ul class="sub-menu">
+                            <li><a href="">Trái cây nhập khẩu</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-child">
+                        <a href="">khuyến mãi</a>
+                        <ul class="sub-menu">
+                            <li><a href="">Trái cây nhập khẩu</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-child">
+                        <a href="">Bán chạy nhất</a>
+                        <ul class="sub-menu">
+                            <li><a href="">Trái cây nhập khẩu</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-child">
+                        <a href="">Hàng mới về</a>
+                        <ul class="sub-menu">
+                            <li><a href="">Trái cây nhập khẩu</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-8">
+            <div class="sliderProduct">
+                <h3 class="sliderProduct__title"><span class="sliderProduct__title__text">Sản phẩm bán chạy</span></h3>
+                <div class="wrapSliderOwl">
+                    <div class="owl-carousel" id="product-best-sale">
+                        @foreach (var item in Model)
+                        {
+                            <div class="productItem ">
+                                <div class="productItem__thumbnail" href="">
+                                    <a class="frame-img1" href="@Url.Action("Details", "Home", new {id = item.MaSanPham })"><img src="~/@item.HinhAnh" /></a>
+                                    <div class="flashAlert"><span class="hot">Hot</span><span class="sale">Sale</span></div>
+                                    <div class="toolBox"><a class="item"><span class="fa fa-shopping-basket"></span></a><a class="item"><span class="fa fa-heart-o"></span></a><a class="item"><span class="fa fa-search"></span></a><a class="item"><span class="fa fa-facebook"></span></a></div>
+                                </div>
+                                <div class="productItem__summary">
+                                    <header class="productItem__title"> <a href="@Url.Action("Details", "Home", new {id = item.MaSanPham })">@item.TenSanPham</a></header>
+                                    <div class="productItem__blockPrice"><span class="productItem__priceOld">@item.Gia<sup>đ</sup></span><span class="productItem__priceNew">@item.GiamGia<sup>đ</sup></span><span class="weight">/ 1kg</span></div>
+                                </div>
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="productHome">
+        <header class="productHome_heading heading"><span class="heading__text">Hàng mới về</span></header>
+        <div class="productHome__body products">
+            <div class="row row-10">
+                @foreach (var item in ViewBag.SanPhamMoiVe)
+                {
+                    <div class="col-sm-4 col-md-3 col-xs-6 col">
+                        <div class="productItem ">
+                            <div class="productItem__thumbnail" href="">
+                                <a class="frame-img1" href="@Url.Action("Details", "Home", new {id = item.MaSanPham })"><img src="~/@item.HinhAnh" /></a>
+                                <div class="flashAlert"><span class="hot">Hot</span><span class="sale">Sale</span></div>
+                                <div class="toolBox"><a class="item"><span class="fa fa-shopping-basket"></span></a><a class="item"><span class="fa fa-heart-o"></span></a><a class="item"><span class="fa fa-search"></span></a><a class="item"><span class="fa fa-facebook"></span></a></div>
+                            </div>
+                            <div class="productItem__summary">
+                                <header class="productItem__title"> <a href="@Url.Action("Details", "Home", new {id = item.MaSanPham })">@item.TenSanPham</a></header>
+                                <div class="productItem__blockPrice"><span class="productItem__priceOld">@item.Gia<sup>đ</sup></span><span class="productItem__priceNew">@item.GiamGia<sup>đ</sup></span><span class="weight">/ 1kg</span></div>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>

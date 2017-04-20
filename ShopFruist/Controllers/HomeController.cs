@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ShopFruist.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -10,7 +11,9 @@ namespace ShopFruist.Controllers
     {
         public ActionResult Index()
         {
-            return View();
+            var SanPhamBanChay = SanPhamBus.List(6, "ASC");
+            ViewBag.SanPhamMoiVe = SanPhamBus.List(12, "DESC");
+            return View(SanPhamBanChay);
         }
 
         public ActionResult About()

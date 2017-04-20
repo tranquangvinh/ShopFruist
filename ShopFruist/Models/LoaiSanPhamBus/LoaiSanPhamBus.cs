@@ -2,12 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using ShopFruistConnection;
 
-namespace ShopFruist.Models
+namespace ShopFruist.Models.LoaiSanPhamBus
 {
-    public class ModelsProduct
+    public class LoaiSanPhamBus
     {
-        
     }
 }
