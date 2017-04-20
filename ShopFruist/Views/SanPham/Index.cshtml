@@ -1,11 +1,7 @@
-﻿
+﻿@model PetaPoco.Page<ShopFruistConnection.SANPHAM>
 @{
     ViewBag.Title = "Index";
 }
-
-<h2>Index</h2>
-
-
 
 <div class="mainContent">
       <div class="container">
@@ -15,28 +11,31 @@
               <div class="info"><span class="btn btn-default btn-style1">Hiển thị 1-12 của 100 kết quả</span></div>
               <div class="products">
                 <div class="row row-10">
-
-                  <div class="col-md-4 col-sm-4 col-xs-6 col">
-                    <div class="productItem ">
-                      <div class="productItem__thumbnail" href=""><a class="frame-img1" href=""><img src="http://thoitrangdmc.com/freshfood-html/asset/img/data/sp1.png"></a>
-                        <div class="flashAlert"><span class="hot">Hot</span><span class="sale">Sale</span></div>
-                        <div class="toolBox"><a class="item"><span class="fa fa-shopping-basket"></span></a><a class="item"><span class="fa fa-heart-o"></span></a><a class="item"><span class="fa fa-search"></span></a><a class="item"><span class="fa fa-facebook"></span></a></div>
-                      </div>
-                      <div class="productItem__summary">
-                        <header class="productItem__title"> <a href="">Cherry Mỹ</a></header>
-                        <div class="productItem__blockPrice"><span class="productItem__priceOld">203.000 <sup>đ</sup></span><span class="productItem__priceNew">150.000 <sup>đ</sup></span><span class="weight">/ 1kg</span></div>
-                      </div>
-                    </div>
-                  </div>
+                    @foreach (var item in Model.Items)
+                    {
+                        <div class="col-md-4 col-sm-4 col-xs-6 col">
+                            <div class="productItem ">
+                                <div class="productItem__thumbnail" href="">
+                                    <a class="frame-img1" href="@Url.Action("Details", "SanPham", new { id = item.MaSanPham})"><img src="~/@item.HinhAnh"></a>
+                                    <div class="flashAlert"><span class="hot">Hot</span><span class="sale">Sale</span></div>
+                                    <div class="toolBox"><a class="item"><span class="fa fa-shopping-basket"></span></a><a class="item"><span class="fa fa-heart-o"></span></a><a class="item"><span class="fa fa-search"></span></a><a class="item"><span class="fa fa-facebook"></span></a></div>
+                                </div>
+                                <div class="productItem__summary">
+                                    <header class="productItem__title"> <a href="@Url.Action("Details", "SanPham", new { id = item.MaSanPham})">@item.TenSanPham</a></header>
+                                    <div class="productItem__blockPrice"><span class="productItem__priceOld">@item.Gia<sup>đ</sup></span><span class="productItem__priceNew">@item.GiamGia<sup>đ</sup></span><span class="weight">/ 1kg</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    }
                 </div>
               </div>
               <nav class="text-center" aria-label="Page navigation">
                 <ul class="pagination">
                   <li><a href="#"><span class="fa fa-angle-left"></span> Prev</a></li>
-                  <li><a href="#">1</a></li>
-                  <li class="active"> <a href="#">2</a></li>
-                  <li><a href="#">3</a></li>
-                  <li><a href="#">4</a></li>
+                    @for (int i = 1; i <= Model.TotalPages; i++)
+                    {
+                        <li><a href="@Url.Action("Index", "SanPham", new { Page = i})">@i</a></li>
+                    }
                   <li><a href="#">Next <span class="fa fa-angle-right"></span></a></li>
                 </ul>
               </nav>

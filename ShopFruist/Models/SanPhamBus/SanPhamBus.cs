@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using ShopFruistConnection;
+using PetaPoco;
 
 namespace ShopFruist.Models
 {
@@ -16,6 +17,7 @@ namespace ShopFruist.Models
             return db.Query<SANPHAM>(query);
         }
 
+
         public static SANPHAM Details(int id)
         {
             var db = new ShopFruistConnectionDB();
@@ -27,6 +29,12 @@ namespace ShopFruist.Models
             var db = new ShopFruistConnectionDB();
             String query = "select top " + limit + " * from sanpham where MaSanPham not in ("  + idSP + ") and LoaiSp = " + LSP;
             return db.Query<SANPHAM>(query);
+        }
+
+        public static Page<SANPHAM> GetProductByProductType(int PageNumber, int itemPerPage, int id) {
+
+            var db = new ShopFruistConnectionDB();
+            return db.Page<SANPHAM>(PageNumber, itemPerPage, "select * from sanpham where LoaiSp=@0", id);
         }
     }
 }
