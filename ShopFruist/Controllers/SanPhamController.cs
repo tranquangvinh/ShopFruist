@@ -10,8 +10,9 @@ namespace ShopFruist.Controllers
     public class SanPhamController : Controller
     {
         // GET: Product
-        public ActionResult Index()
+        public ActionResult Index(int id)
         {
+            ViewBag.SanPhamBanChay = SanPhamBus.List(6, "ASC");
             return View();
         }
 

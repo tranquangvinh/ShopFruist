@@ -19,46 +19,6 @@
     <script src="~/asset/js/app.js"></script>
 </head>
 <body>
-    <div class="headerSiteMobile">
-        <div class="wrap"><a class="btn btn-menu"></a><a class="logo" href=""><img src="~/asset/img/logo.png" /></a></div>
-        <div class="headerFooter">
-            <div class="pull-left">
-                <div class="headerSite__social"><a><span class="fa fa-facebook"></span></a><a><span class="fa fa-twitter"></span></a><a><span class="fa fa-youtube"></span></a><a><span class="fa fa-skype"></span></a><a><span class="fa fa-google-plus"></span></a></div>
-            </div>
-            <div class="pull-right"><a class="headerSite__cart cart" href="">Giỏ hàng<span class="cart__count">10</span></a></div>
-            <div class="clearfix"></div>
-        </div>
-        <div class="overlayMenu"></div>
-        <div class="menuMobile">
-            <ul class="menu">
-                <li><a href=""><span class="fa fa-home"></span>Trang chủ</a></li>
-                <li class="has-child">
-                    <a href="">Sản phẩm</a>
-                    <ul class="sub-menu">
-                        <li class="has-child">
-                            <a href="">TRái cây nhập khẩu</a>
-                            <ul class="sub-menu">
-                                <li><a href="">TRái cây nhập khẩu</a></li>
-                                <li><a href="">TRái cây xuất khẩu</a></li>
-                                <li><a href="">TRái cây sấy khô</a></li>
-                                <li><a href="">TRái cây theo mùa</a></li>
-                                <li><a href="">khuyến mãi</a></li>
-                                <li><a href="">Bán chạy nhất</a></li>
-                                <li><a href="">Hàng mới về</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="">TRái cây xuất khẩu</a></li>
-                        <li><a href="">TRái cây sấy khô</a></li>
-                        <li><a href="">TRái cây theo mùa</a></li>
-                        <li><a href="">khuyến mãi</a></li>
-                        <li><a href="">Bán chạy nhất</a></li>
-                        <li><a href="">Hàng mới về</a></li>
-                    </ul>
-                </li>
-                <li><a href="">Liên hệ</a></li>
-            </ul>
-        </div>
-    </div>
     <div class="headerSite">
         <div class="container">
             <div class="headerSite__content">
@@ -67,29 +27,10 @@
             <div class="headerSite__menu">
                 <div class="menu-wrap menuHorizontal">
                     <ul class="menu">
-                        <li><a href=""><span class="fa fa-home"></span>Trang chủ</a></li>
+                        <li><a href="@Html.Action("Index", "Home")"><span class="fa fa-home"></span>Trang chủ</a></li>
                         <li>
                             <a href="">Sản phẩm</a>
-                            <ul class="sub-menu">
-                                <li class="has-child">
-                                    <a href="">TRái cây nhập khẩu</a>
-                                    <ul class="sub-menu">
-                                        <li><a href="">TRái cây nhập khẩu</a></li>
-                                        <li><a href="">TRái cây xuất khẩu</a></li>
-                                        <li><a href="">TRái cây sấy khô</a></li>
-                                        <li><a href="">TRái cây theo mùa</a></li>
-                                        <li><a href="">khuyến mãi</a></li>
-                                        <li><a href="">Bán chạy nhất</a></li>
-                                        <li><a href="">Hàng mới về</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="">TRái cây xuất khẩu</a></li>
-                                <li><a href="">TRái cây sấy khô</a></li>
-                                <li><a href="">TRái cây theo mùa</a></li>
-                                <li><a href="">khuyến mãi</a></li>
-                                <li><a href="">Bán chạy nhất</a></li>
-                                <li><a href="">Hàng mới về</a></li>
-                            </ul>
+                            @Html.Action("Index", "Menu")
                         </li>
                         <li><a href="">Liên hệ</a></li>
                     </ul>
