@@ -59,6 +59,32 @@ namespace ShopFruist.Areas.Admin.Controllers
             }
 
             Models.SanPhamBus.SanPhamBus.insert(sp);
+            String link = "";
+            int id=-1; 
+            for (int i = 1; i <= 4; i++)
+            {
+                hpt = HttpContext.Request.Files[i];
+                if(hpt.FileName == "")
+                {
+
+                }else
+                {
+                    if (HttpContext.Request.Files.Count > 0)
+                    {
+                        if (hpt.ContentLength > 0)
+                        {
+                            string temp = hpt.FileName;
+                            string RDString = Guid.NewGuid().ToString();
+                            string fullNameImage = "upload/img/" + RDString + temp;
+                            hpt.SaveAs(pathValue + fullNameImage);
+                            link = fullNameImage;
+                            id = sp.MaSanPham;
+
+                        }
+                    }
+                    Models.DanhSachHinh.DanhSachHinh.insertImg(link, id);
+                }
+            }
 
             return RedirectToAction("Create");
         }

@@ -1,4 +1,5 @@
 ﻿using ShopFruist.Models;
+using ShopFruist.Models.DanhSachHinh;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -27,6 +28,8 @@ namespace ShopFruist.Controllers
             ViewBag.LSP = Models.LoaiSanPhamBus.LoaiSanPhamBus.DanhSach();
              
             ViewBag.SanPhamLienQuan = SanPhamBus.RelatedProductsDetails(id, 6, sp.LoaiSp);
+
+            ViewBag.listimg = DanhSachHinh.danhsach(id);
          
             return View(sp);
         }

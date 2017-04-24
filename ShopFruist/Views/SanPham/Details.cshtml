@@ -41,21 +41,28 @@
                                 <div class="flexslider" id="slider">
                                     <ul class="slides">
                                         <li><img src="~/@Model.HinhAnh" /></li>
-                                        <li><img src="http://thoitrangdmc.com/freshfood-html/asset/img/data/sp2.jpg" /></li>
-                                        <li><img src="http://thoitrangdmc.com/freshfood-html/asset/img/data/sp3.jpg" /></li>
-                                        <li><img src="http://thoitrangdmc.com/freshfood-html/asset/img/data/sp4.jpg" /></li>
-                                        <li><img src="http://thoitrangdmc.com/freshfood-html/asset/img/data/sp5.jpg" /></li>
-                                        <li><img src="http://thoitrangdmc.com/freshfood-html/asset/img/data/sp6.jpg" /></li>
+                                        @if (ViewBag.listimg != null)
+                                        {
+                                            foreach (var item in ViewBag.listimg)
+                                            {
+                                                <li><img src="~/@item.LinkHinh" /></li>
+                                            }
+                                        } 
+
+
+
                                     </ul>
                                 </div>
                                 <div class="flexslider" id="carousel">
                                     <ul class="slides">
                                         <li><span class="frame-img1"><img src="~/@Model.HinhAnh" /></span></li>
-                                        <li><span class="frame-img1"><img src="http://thoitrangdmc.com/freshfood-html/asset/img/data/sp2.jpg" /></span></li>
-                                        <li><span class="frame-img1"><img src="http://thoitrangdmc.com/freshfood-html/asset/img/data/sp3.jpg" /></span></li>
-                                        <li><span class="frame-img1"><img src="http://thoitrangdmc.com/freshfood-html/asset/img/data/sp4.jpg" /></span></li>
-                                        <li><span class="frame-img1"><img src="http://thoitrangdmc.com/freshfood-html/asset/img/data/sp5.jpg" /></span></li>
-                                        <li><span class="frame-img1"><img src="http://thoitrangdmc.com/freshfood-html/asset/img/data/sp6.jpg" /></span></li>
+                                        @if (ViewBag.listimg != null)
+                                        {
+                                            foreach (var item in ViewBag.listimg)
+                                            {
+                                                <li><img src="~/@item.LinkHinh" /></li>
+                                            }
+                                        }
                                     </ul>
                                 </div>
                             </div>
